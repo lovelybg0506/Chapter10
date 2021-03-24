@@ -23,7 +23,7 @@ class PersonalNumInfo {
 	String getNumber() {
 		return number;
 	}
-
+}
 	class PersonalNumberStorageImpl extends PersonalNumberStorage {
 		PersonalNumInfo[] perArr;
 		int numOfPerInfo;
@@ -41,12 +41,14 @@ class PersonalNumInfo {
 		public String searchName(String perNum) {
 			for (int i = 0; i < numOfPerInfo; i++) {
 				if (perNum.equals(perArr[i].getNumber()))
-
+//				if (perNum.compareTo(perArr[i].getNumber())==0)
 					return perArr[i].getName();
 			}
+//			return perNum;
+				return null;
+		}
 	}
-}
-}
+
 
 public class AbstractInterface_10 {
 
