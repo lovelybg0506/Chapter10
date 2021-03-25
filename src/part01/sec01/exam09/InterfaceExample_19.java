@@ -97,12 +97,13 @@ public class InterfaceExample_19 {
 		arr[1]=new SeparateVolume1("609.2","서양미술사","곰브리치");
 		arr[2]=new AppCDInfo1("02-17","XML을 위한 자바 프로그래밍");
 
-		checkOutAll(arr[0],"강병규","2021-03-24");
-		
+		checkOutAll(arr,"강병규","2021-03-24");
+
 	}
 
 	public static void checkOutAll(Lendable1 arr[], String borrower, String date) {
-		
+		for(int cnt = 0; cnt < arr.length; cnt++)
+		arr[cnt].checkOut(borrower, date);
 		
 	}
 	
